@@ -1,13 +1,13 @@
 # GiveGuard API Contract
 
-Base URL (local): http://localhost:8000
-Base URL (deployed): https://giveguard.onrender.com
+**Base URL (local): http://localhost:8000**
+**Base URL (deployed): https://giveguard.onrender.com**
 
 ---
 
 ## POST /verify
 
-Submit a nonprofit EIN for verification.
+**Submit a nonprofit EIN for verification.**
 
 ### Request body
 {
@@ -40,7 +40,7 @@ Submit a nonprofit EIN for verification.
 
 ## GET /submissions
 
-Get all past submissions for the dashboard feed.
+**Get all past submissions for the dashboard feed.**
 
 ### Response
 {
