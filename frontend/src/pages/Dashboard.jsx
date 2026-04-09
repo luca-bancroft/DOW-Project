@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { verifyEIN, getSubmissions } from '../api/giveguard.js'
+import { useState } from 'react'
+import { verifyEIN } from '../api/giveguard.js'
 import MetricCards from '../components/MetricCards.jsx'
 import EINSubmitBar from '../components/EINSubmitBar.jsx'
 import SubmissionTable from '../components/SubmissionTable.jsx'
@@ -24,12 +24,6 @@ export default function Dashboard() {
   const visible = filter
     ? submissions.filter(s => s.verdict === filter)
     : submissions
-
-  useEffect(() => {
-    getSubmissions()
-      .then(data => setSubmissions(data.submissions))
-      .catch(() => setError('Could not load submissions'))
-  }, [])
 
   async function handleSubmit(ein) {
     setLoading(true)
